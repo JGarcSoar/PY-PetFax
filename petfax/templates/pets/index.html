@@ -1,0 +1,28 @@
+{% extends "index-base.html" %}
+
+{% block title %} Petfax {% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>PetFax</h1>
+        <div class="callout">
+            Welcome to PetFax!
+        </div>
+
+        <div class="pets-container">
+            <h1>Hello!</h1>
+            {% for pet in pets %}
+                <div class="pet">
+                    <h2>{{pet.pet_name}}</h2>
+                    <img src="{{pet.pet_photo}}" alt="Pic of {{pet.pet_name}}">
+                    <a href="/pets/{{pet.pet_id}}"> Learn more about {{pet.pet_name}}</a>
+                    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+                </div>
+            {% endfor %}
+        </div>
+        <div class="callout">
+            <a href="/facts/new">Submit some facts!</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "index-base.html" %}
+
+{% block title %} New Facts {% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Submit your fact</h1>
+        <div class="callout">
+            lorem ipsum
+        </div>
+        <div class="facts-container">
+            <form method="POST">
+                <label for="submitter">
+                    <h2>Submitter</h2>
+                </label>
+                <input type="text" name="submitter">
+                <br>
+                <label for="fact">
+                    <h2>Fact</h2>
+                </label>
+                <textarea name="" id="" cols="30" rows="10">
+
+                </textarea>
+                <br>
+                <input type="button" value="Submit a fact">
+            </form>
+        </div>
+        <a href="/pets">&lt;&lt; Go Back!</a>
+    </div>
+{% endblock %}
